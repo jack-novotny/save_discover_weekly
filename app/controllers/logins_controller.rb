@@ -1,2 +1,0 @@
-class LoginsController < ApplicationController
-end
