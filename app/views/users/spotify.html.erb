@@ -3,3 +3,12 @@
 <p>
 	Welcome, <%= @spotify_user.display_name %>!
 </p>
+
+<h4>Your current discover weekly is: </h4>
+<p>
+	<% if @current_discover_weekly.present? %>
+	  <%= @current_discover_weekly.name %>
+	<% else %>
+	  Make your discover weekly public!!!
+	<% end %>
+</p>
