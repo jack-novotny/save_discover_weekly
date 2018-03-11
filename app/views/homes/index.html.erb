@@ -7,4 +7,10 @@
   <li> 4. More features to come </li>
 </ul>
 
-<%= link_to 'Sign in with Spotify', '/auth/spotify' %>
+<p> maybe this is just the welcome page? </p>
+
+<%= params[:spotify_user] %>
+<% if @spotify_user.nil? %>
+
+  <%= link_to 'Sign in with Spotify', '/auth/spotify' %>
+<% end %>
