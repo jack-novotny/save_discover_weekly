@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  get 'homes/index/:spotify_user', to: 'homes#index'
   root 'homes#index'
   get '*path', to: redirect('/')
 end
