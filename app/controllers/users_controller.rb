@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     @spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
     @playlists = find_playlists
     find_current_discover_weekly
+    find_songs
   end
 
   private
@@ -16,5 +17,9 @@ class UsersController < ApplicationController
         @current_discover_weekly = playlist
       end
     end
+  end
+
+  def find_songs
+    @songs = @current_discover_weekly.tracks
   end
 end

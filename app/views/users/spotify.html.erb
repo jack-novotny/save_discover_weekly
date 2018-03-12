@@ -12,3 +12,9 @@
 	  Make your discover weekly public!!!
 	<% end %>
 </p>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li><%= song.name %></li>
+  <% end %>
+</ul>
