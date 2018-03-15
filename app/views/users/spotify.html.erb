@@ -2,6 +2,7 @@
 
 <p>
 	Welcome, <%= @spotify_user.display_name %>!
+  <%= @spotify_user.email %>
 </p>
 
 <h4>Your current discover weekly is: </h4>
@@ -15,8 +16,10 @@
 
 <ul>
   <% @songs.each do |song| %>
-    <li><%= song.name %> - <%= song.artists.first.name %>
+    <li>
     	<%= image_tag(song.album.images.first["url"], size: "100x100") %>
+    	<br>
+    	<%= song.name %> - <%= song.artists.first.name %>
     </li>
   <% end %>
 </ul>
