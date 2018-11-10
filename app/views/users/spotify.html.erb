@@ -13,13 +13,16 @@
 	  Make your discover weekly public!!!
 	<% end %>
 </p>
-
-<ul>
+<div class="card-columns">
   <% @songs.each do |song| %>
-    <li>
-    	<%= image_tag(song.album.images.first["url"], size: "100x100") %>
-    	<br>
-    	<%= song.name %> - <%= song.artists.first.name %>
-    </li>
+    <div class="card text-white bg-dark mb-3">
+      <%= image_tag(song.album.images.first["url"], size: "100x100", class: "card-img-top") %>
+      <div class="card-body">
+        <div class="card-text">
+    	    <%= song.name %> - <%= song.artists.first.name %>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
+
