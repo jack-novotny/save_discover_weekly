@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 #Front-end Styling
-gem 'bootstrap', '~> 4.0'
+gem 'bootstrap', '~> 4.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use postgresql as the database for Active Record
